@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ParticlesBg from 'particles-bg';
 import FaceRecognition from './components/facerecognition/FaceRecognition';
 import Navigation from './components/navigation/Navigation';
 import Signin from './components/signin/SignIn';
@@ -104,6 +105,7 @@ class App extends Component {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
       <div className="App">
+        <ParticlesBg type="circle" bg={true} />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         { route === 'home'
           ? <div>
